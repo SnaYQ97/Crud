@@ -6,32 +6,27 @@ import { Nav, Alert } from 'components';
 export default App;
 
 function App({ Component, pageProps }) {
-    return (
-        <>
-            <Head>
-                <title>Next.js 10 - CRUD Example with React Hook Form</title>
+	return (
+		<>
+			<Head>
+				<title>CRUD</title>
 
-                {/* bootstrap css */}
-                <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-            </Head>
+				{/* bootstrap css */}
+				<link
+					rel='stylesheet'
+					href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'
+					integrity='sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2'
+					crossorigin='anonymous'
+				/>
+			</Head>
 
-            <div className="app-container bg-light">
-                <Nav />
-                <Alert />
-                <div className="container pt-4 pb-4">
-                    <Component {...pageProps} />
-                </div>
-            </div>
-
-            {/* credits */}
-            <div className="text-center mt-4">
-                <p>
-                    <a href="https://jasonwatmore.com/post/2021/04/20/next-js-10-crud-example-with-react-hook-form" target="_top">Next.js 10 - CRUD Example with React Hook Form</a>
-                </p>
-                <p>
-                    <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
-                </p>
-            </div>
-        </>
-    );
+			<div className='app-container bg-light'>
+				<Nav />
+				<Alert />
+				<div className='container pt-4 pb-4'>
+					<Component {...pageProps} />
+				</div>
+			</div>
+		</>
+	);
 }
